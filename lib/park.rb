@@ -14,7 +14,7 @@ class Park
   def trails_shorter_than(length)
     trails_by_length = []
     @trails.each do |trail|
-      if trail.convert_length <= length
+      if trail.convert_length < length
         trails_by_length << trail
       end
     end
