@@ -10,4 +10,14 @@ class Park
   def add_trail(trail)
     @trails << trail
   end
+
+  def trails_shorter_than(length)
+    trails_by_length = []
+    @trails.each do |trail|
+      if trail.convert_length <= length
+        trails_by_length << trail
+      end
+    end
+    trails_by_length
+  end
 end
