@@ -76,7 +76,7 @@ RSpec.describe Hiker do
       hiker.visit(park2)
 
       expected = [trail2, trail4, trail6]
-      expect(park2.possible_trails).to eq(expected)
+      expect(hiker.possible_trails).to eq(expected)
     end
   end
 end
