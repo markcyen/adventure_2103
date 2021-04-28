@@ -26,10 +26,10 @@ class Park
   end
 
   def trails_by_level
-    trail_level = Hash.new { |hash, level| hash[level] = [] }
+    trail_hash = Hash.new { |hash, level| hash[level] = [] }
     @trails.each do |trail|
-      trail_level[trail.level] << trail.name
+      trail_hash[trail.level] << trail.name
     end
-    trail_level
+    trail_hash
   end
 end
