@@ -8,4 +8,8 @@ class Trail
     @length = trail_data[:length]
     @level = trail_data[:level]
   end
+
+  def convert_length
+    @length.split[0].to_f
+  end
 end
