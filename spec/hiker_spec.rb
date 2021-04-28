@@ -28,11 +28,19 @@ RSpec.describe Hiker do
       hiker.pack('water', 1)
       hiker.pack('trail mix', 3)
 
-      expected = {
+      expected_1 = {
         "water" => 1,
         "trail mix" => 3
       }
-      expect(hiker.snacks).to eq(expected)
+      expect(hiker.snacks).to eq(expected_1)
+
+      hiker.pack('water', 1)
+
+      expected_2 = {
+        "water" => 2,
+        "trail mix" => 3
+      }
+      expect(hiker.snacks).to eq(expected_2)
     end
   end
 
