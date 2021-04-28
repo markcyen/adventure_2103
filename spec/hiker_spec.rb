@@ -37,10 +37,21 @@ RSpec.describe Hiker do
   end
 
   context '#parks_visited' do
-    it 'lists parks visited by hiker' do
+    it 'lists parks visited by hiker, currently none' do
       hiker = Hiker.new('Dora', :moderate)
 
       expect(hiker.parks_visited).to eq([])
+    end
+
+    it 'lists a couple of parks visited by hiker' do
+      hiker = Hiker.new('Dora', :moderate)
+      park1 = Park.new('Capitol Reef')
+      park2 = Park.new('Bryce Canyon')
+      hiker.visit(park1)
+      hiker.visit(park2)
+
+      expected = [park1, park2]
+      expect(hiker.parks_visited).to eq(expected)
     end
   end
 end
