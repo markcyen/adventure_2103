@@ -107,9 +107,6 @@ RSpec.describe Park do
       park2.add_trail(trail4)
       park2.add_trail(trail5)
       park2.add_trail(trail6)
-      hiker = Hiker.new('Dora', :moderate)
-      hiker.visit(park1)
-      hiker.visit(park2)
 
       expected_1 = {
          :easy => ["Grand Wash"],
