@@ -19,7 +19,9 @@ RSpec.describe Park do
       expect(park1.name).to eq('Capitol Reef')
       expect(park1.trails).to eq([])
     end
+  end
 
+  context '#add_trail' do
     it 'has trails added' do
       park1 = Park.new('Capitol Reef')
       trail1 = Trail.new({name: 'Grand Wash', length: '2.2 miles', level: :easy})
@@ -33,7 +35,7 @@ RSpec.describe Park do
   end
 
   context '#trails_shorter_than' do
-    it 'lists trails shorter than a float' do
+    it 'lists trails shorter than given miles' do
       trail1 = Trail.new({name: 'Grand Wash', length: '2.2 miles', level: :easy})
       trail2 = Trail.new({name: 'Cohab Canyon', length: '1.7 miles', level: :moderate})
       trail3 = Trail.new({name: 'Chimney Rock Loop', length: '3.6 miles', level: :strenuous})
