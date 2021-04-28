@@ -24,7 +24,7 @@ RSpec.describe Trail do
     it 'converts the trail length to float' do
       trail1 = Trail.new({name: 'Grand Wash', length: '2.2 miles', level: :easy})
 
-      expect(trail1.covnert_length(length)).to eq(2.2)
+      expect(trail1.convert_length).to eq(2.2)
     end
   end
 end
