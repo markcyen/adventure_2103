@@ -81,7 +81,7 @@ RSpec.describe Hiker do
   end
 
   context '#favorite_snack' do
-    it 'adds total hikeable miles in park' do
+    it 'finds hikers favorite snack' do
       trail1 = Trail.new({name: 'Grand Wash', length: '2.2 miles', level: :easy})
       trail2 = Trail.new({name: 'Cohab Canyon', length: '1.7 miles', level: :moderate})
       trail3 = Trail.new({name: 'Chimney Rock Loop', length: '3.6 miles', level: :strenuous})
@@ -95,7 +95,6 @@ RSpec.describe Hiker do
       hiker.pack('trail mix', 1)
       hiker.pack('apple', 4)
       hiker.pack('carrot', 3)
-      hiker.favorite_snack
 
       expect(hiker.favorite_snack).to eq("apple")
     end
