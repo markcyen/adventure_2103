@@ -54,6 +54,7 @@ RSpec.describe Park do
 
       expected = [trail1, trail2]
       expect(park1.trails_shorter_than(2.5)).to eq(expected)
+      expect(park2.trails_shorter_than(2.5)).to eq([])
     end
   end
 end
