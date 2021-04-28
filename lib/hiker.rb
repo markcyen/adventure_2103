@@ -30,4 +30,11 @@ class Hiker
     end
     hiker_trails
   end
+
+  def favorite_snack
+    best_snack = @snacks.max_by do |snack, quantity|
+      quantity
+    end
+    best_snack[0]
+  end
 end
