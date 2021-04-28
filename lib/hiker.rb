@@ -14,4 +14,8 @@ class Hiker
   def pack(snack, quantity)
     @snacks[snack] += quantity
   end
+
+  def visit(park)
+    @parks_visited << park
+  end
 end
