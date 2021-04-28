@@ -6,6 +6,10 @@ class Hiker
   def initialize(name, experience_level)
     @name = name
     @experience_level = experience_level
-    @snacks = Hash.new { |hash, snack| hash[snack] = {} }
+    @snacks = Hash.new { |hash, snack| hash[snack] = 0 }
+  end
+
+  def pack(snack, quantity)
+    @snacks[snack] += quantity
   end
 end
