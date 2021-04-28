@@ -56,7 +56,7 @@ RSpec.describe Hiker do
   end
 
   context '#possible_trails' do
-    it 'adds total hikeable miles in park' do
+    it 'returns list of trails hiker visited that matched experience level' do
       trail1 = Trail.new({name: 'Grand Wash', length: '2.2 miles', level: :easy})
       trail2 = Trail.new({name: 'Cohab Canyon', length: '1.7 miles', level: :moderate})
       trail3 = Trail.new({name: 'Chimney Rock Loop', length: '3.6 miles', level: :strenuous})
