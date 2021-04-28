@@ -23,9 +23,7 @@ class Hiker
     hiker_trails = []
     @parks_visited.each do |park|
       park.trails.each do |trail|
-        if trail.level == @experience_level
-          hiker_trails << trail
-        end
+        hiker_trails << trail if trail.level == @experience_level
       end
     end
     hiker_trails
