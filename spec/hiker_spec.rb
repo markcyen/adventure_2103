@@ -32,7 +32,7 @@ RSpec.describe Hiker do
         "water" => 1,
         "trail mix" => 3
       }
-      expect(hiker.snacks).to eq('Dora')
+      expect(hiker.snacks).to eq(expected)
     end
   end
 end
