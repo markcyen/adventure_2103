@@ -35,4 +35,12 @@ RSpec.describe Hiker do
       expect(hiker.snacks).to eq(expected)
     end
   end
+
+  context '#parks_visited' do
+    it 'lists parks visited by hiker' do
+      hiker = Hiker.new('Dora', :moderate)
+
+      expect(hiker.parks_visited).to eq([])
+    end
+  end
 end
